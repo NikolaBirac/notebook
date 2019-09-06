@@ -11,5 +11,13 @@
   <div class="notebook__list">
     <app-contact-item *ngFor='let contact of contacts; let i = index' [contact]="contact" [index]="i">
     </app-contact-item>
+
+    <div class="notebook__error" *ngIf=error>
+      Something went wrong. Try again later.
+    </div>
+
+    <div class="lds-ring" *ngIf=loading>
+      <div></div><div></div><div></div><div></div>
+    </div>
   </div>
 </div>

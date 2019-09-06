@@ -47,6 +47,11 @@ input.ng-invalid.ng-touched::placeholder {
   color: #fff;
 }
 
+.error {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .disabled {
   background-color: #a7a7a7 !important;
 }

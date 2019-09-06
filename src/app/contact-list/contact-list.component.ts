@@ -9,16 +9,21 @@ import { Contact } from '../contact.model';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit, OnDestroy {
+  loading = true;
+  error = false;
   contacts: Contact[];
   private subscription: Subscription;
 
   constructor(private contactService: ContactsService) { }
 
   ngOnInit() {
-    this.subscription = this.contactService.getContacts().subscribe(response => {
+    this.subscription = this.contactService.getContacts().subscribe(response => {      
       response.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
       this.contacts = response;
-    })
+      this.loading = false;
+    },
+    error => this.error = true
+    )
   }
 
   ngOnDestroy() {

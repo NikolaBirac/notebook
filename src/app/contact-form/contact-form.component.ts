@@ -11,6 +11,7 @@ import { Contact } from '../contact.model';
    styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent implements OnInit, OnDestroy {
+   error = false;
    id: string;
    editMode = false;
    @ViewChild('f') contactForm: NgForm;
@@ -37,7 +38,6 @@ export class ContactFormComponent implements OnInit, OnDestroy {
 
       if (this.editMode) {
          this.subscription = this.contactService.editContact(newContact).subscribe(res => {
-            console.log('edit');
             this.router.navigate(["/"]);
          });
       } else {
@@ -77,7 +77,9 @@ export class ContactFormComponent implements OnInit, OnDestroy {
                      tags
                   })
                });
-            });
+            },
+               error => this.error = true
+            );
       } else {
          setTimeout(() => {
             this.contactForm.setValue({
