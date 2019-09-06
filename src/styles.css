@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: linear-gradient(to right top, #5e67c2, #8b66c1, #af64bc, #ce64b2, #e766a5, #f66d92, #fe7980, #ff8971, #ffa260, #fcbf55, #e9dc58, #caf971);
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 900px) {
+  
+  body {
+    font-size: 16px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* .notebook__item {
+  background-color: #c7ce64
+}
+.notebook__item:nth-child(2) {
+  background-color: rgba(155, 48, 16, 0.95) !important;
+  /* background-color: rgba(63, 60, 51, 0.95); */
+/* } */ 
+/* #45463E   #3F3C33 */

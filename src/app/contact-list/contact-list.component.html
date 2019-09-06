@@ -1,0 +1,15 @@
+<div class="notebook">
+  <!-- <p class="notebook__contact-number">{{contacts.length}} contacts</p> -->
+  <div class="notebook__header">
+    <div>Name</div>
+    <div>Number</div>
+    <div>Email</div>
+    <div>Tags</div>
+    <div>My contacts</div>
+  </div>
+
+  <div class="notebook__list">
+    <app-contact-item *ngFor='let contact of contacts; let i = index' [contact]="contact" [index]="i">
+    </app-contact-item>
+  </div>
+</div>

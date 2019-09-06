@@ -1,0 +1,48 @@
+.notebook__item {
+  display: block;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 0;
+  position: relative;
+}
+
+.notebook__item div {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  /* padding: 0 1px; */
+}
+
+.bg1 {
+  background-color: rgba(69, 70, 62, 0.9);
+}
+
+.bg2 {
+  background-color: rgba(63, 60, 51, 0.95);
+}
+
+@media (max-width: 620px) {
+
+  .notebook__item {
+    padding: 15px 30px;
+  }
+
+  .notebook__item div {
+    text-align: left;
+  }
+
+  .notebook__item div:nth-of-type(2) {
+    text-align: right;
+  }
+
+  .notebook__item div {
+    width: 50%;
+  }
+
+  .notebook__item div:nth-of-type(3),
+  .notebook__item div:nth-of-type(4) {
+    display: none;
+  }
+}

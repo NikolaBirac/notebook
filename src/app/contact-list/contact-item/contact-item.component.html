@@ -1,0 +1,9 @@
+<a [routerLink]="[contact.id]" 
+  class="notebook__item" 
+  [ngClass]="index % 2 ? 'bg1' : 'bg2'"
+  >
+  <div>{{contact.name}}</div>
+  <div>{{contact.number}}</div>
+  <div>{{contact.email}}</div>
+  <div>{{contact.tags}}</div>
+</a>
